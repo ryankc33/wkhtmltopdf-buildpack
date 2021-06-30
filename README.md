@@ -7,6 +7,7 @@ binary with your environment.
 
 * Buildpack:   `0.3`
 * wkhtmltopdf: `0.12.6` by default
+* linux_version: `focal`
 
 ## Usage
 
@@ -20,6 +21,9 @@ $ heroku buildpacks:add https://github.com/ryankc33/wkhtmltopdf-buildpack.git
 
 If you want to use a `wkhtmltopdf` version other than 0.12.6, set
 `WKHTMLTOPDF_VERSION`:
+
+If you want to use a `linux` version other than `focal`, set
+`WKHTMLTOPDF_LINUX_VERSION`:
 
 ```bash
 heroku config:set WKHTMLTOPDF_VERSION="0.12.4"
@@ -38,7 +42,7 @@ $ heroku repo:purge_cache -a appname
 ## Troubleshooting
 
 If you run into issues when trying to deploy with this buildpack, make sure your
-app is running on `cedar-14` or `heroku-16`. You can check this with:
+app is running on `heroku-20`. You can check this with:
 
 ```bash
 $ heroku stack
